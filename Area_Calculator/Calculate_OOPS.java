@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*;     // to import all built-in libraries
 
 
 abstract class Shape
@@ -11,11 +11,11 @@ abstract class Shape
     
     public void disp()
     {
-        System.out.println("The area is "+ area);
+        System.out.println("The area is " + area);
     }
 }
 
-class Rectangle1 extends Shape
+class Rectangle1 extends Shape    // class names can't be repeated within same package so used Rectangle1
 {
     float length;
     float breadth;
@@ -83,7 +83,7 @@ class Circle1 extends Shape
 
 class Geometry 
 {
-    public void poly(Shape ref)
+    public void poly(Shape ref)   // using parent class reference to call child methods
     {
         ref.input();
         ref.compute();
@@ -104,7 +104,7 @@ public class Calculate_OOPS
         Circle1 c=new Circle1();
 
         Geometry g=new Geometry();
-        g.poly(rec);
+        g.poly(rec);      // parent class reference holds all three child class objects here
         g.poly(sq);
         g.poly(c);
         
